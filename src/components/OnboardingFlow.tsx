@@ -140,13 +140,13 @@ export function OnboardingFlow({
                 <div className="mb-2">
                   <h3 className="text-lg font-semibold">{t.step2Title}</h3>
                   <p className="text-xs text-zinc-400">
-                    Role: <span className="capitalize text-emerald-400">{role}</span>
+                    {t.roleLabel}<span className="capitalize text-emerald-400">{role === "buyer" ? t.buyer : t.vendor}</span>
                   </p>
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="neq" className="text-xs font-semibold text-zinc-300">
-                    NEQ (Numéro d'entreprise du Québec)
+                    {t.neqLabel}
                   </label>
                   <input
                     id="neq"
@@ -189,11 +189,11 @@ export function OnboardingFlow({
                     onChange={(e) => setIndustry(e.target.value)}
                     className="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-2.5 text-sm text-zinc-200 focus:border-emerald-500 focus:outline-none"
                   >
-                    <option value="manufacturing">Manufacturing / Manufacturier</option>
-                    <option value="it">Information Technology / TI</option>
-                    <option value="construction">Construction / Bâtiment</option>
-                    <option value="logistics">Logistics / Transport</option>
-                    <option value="professional_services">Professional Services / Services pro</option>
+                    <option value="manufacturing">{t.industries.manufacturing}</option>
+                    <option value="it">{t.industries.it}</option>
+                    <option value="construction">{t.industries.construction}</option>
+                    <option value="logistics">{t.industries.logistics}</option>
+                    <option value="professional_services">{t.industries.services}</option>
                   </select>
                 </div>
 
@@ -203,7 +203,7 @@ export function OnboardingFlow({
                     onClick={() => setStep(1)}
                     className="flex-1 rounded-lg border border-zinc-800 py-2.5 text-sm font-medium hover:bg-zinc-900 transition-colors"
                   >
-                    Back
+                    {t.back}
                   </button>
                   <button
                     type="submit"

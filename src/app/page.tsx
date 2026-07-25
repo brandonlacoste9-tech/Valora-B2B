@@ -118,38 +118,38 @@ export default function Home() {
               <div className="flex items-center justify-between border-b border-zinc-800 pb-4 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-ping" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-zinc-400">Live AI Matchmaker</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-zinc-400">{t.hero.widget.title}</span>
                 </div>
-                <span className="text-xs bg-zinc-800 px-2 py-0.5 rounded text-zinc-300">Quebec Portal</span>
+                <span className="text-xs bg-zinc-800 px-2 py-0.5 rounded text-zinc-300">{t.hero.widget.portal}</span>
               </div>
 
               {/* Feed simulation */}
               <div className="space-y-3">
                 <div className="rounded-xl border border-zinc-800 bg-zinc-950/60 p-3.5">
                   <div className="flex items-center justify-between text-xs text-zinc-500 mb-1.5">
-                    <span>99% Match Score</span>
-                    <span>Just Now</span>
+                    <span>99% {t.hero.widget.score}</span>
+                    <span>{t.hero.widget.now}</span>
                   </div>
-                  <h4 className="text-sm font-bold text-zinc-200">RFP: Hydroelectric Parts Supply</h4>
-                  <p className="text-xs text-zinc-400 mt-1">Matched Vendor: Quebec Métal Inc. (NEQ Verified)</p>
+                  <h4 className="text-sm font-bold text-zinc-200">{t.hero.widget.rfp1}</h4>
+                  <p className="text-xs text-zinc-400 mt-1">{t.hero.widget.vendor1}</p>
                 </div>
 
                 <div className="rounded-xl border border-zinc-800 bg-zinc-950/60 p-3.5 opacity-80">
                   <div className="flex items-center justify-between text-xs text-zinc-500 mb-1.5">
-                    <span>97% Match Score</span>
-                    <span>3 mins ago</span>
+                    <span>97% {t.hero.widget.score}</span>
+                    <span>3 {t.hero.widget.minsAgo}</span>
                   </div>
-                  <h4 className="text-sm font-bold text-zinc-300">RFQ: IT Infrastructure Cloud Migration</h4>
-                  <p className="text-xs text-zinc-500 mt-1">Matched Vendor: Technologies Alt-FR</p>
+                  <h4 className="text-sm font-bold text-zinc-300">{t.hero.widget.rfp2}</h4>
+                  <p className="text-xs text-zinc-500 mt-1">{t.hero.widget.vendor2}</p>
                 </div>
 
                 <div className="rounded-xl border border-zinc-800 bg-zinc-950/60 p-3.5 opacity-60">
                   <div className="flex items-center justify-between text-xs text-zinc-500 mb-1.5">
-                    <span>94% Match Score</span>
-                    <span>12 mins ago</span>
+                    <span>94% {t.hero.widget.score}</span>
+                    <span>12 {t.hero.widget.minsAgo}</span>
                   </div>
-                  <h4 className="text-sm font-bold text-zinc-400">RFQ: Heavy Logistics Route Management</h4>
-                  <p className="text-xs text-zinc-500 mt-1">Matched Vendor: Logistique Laurentides</p>
+                  <h4 className="text-sm font-bold text-zinc-400">{t.hero.widget.rfp3}</h4>
+                  <p className="text-xs text-zinc-500 mt-1">{t.hero.widget.vendor3}</p>
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-zinc-900 py-8 text-center text-xs text-zinc-500">
-        <p>© 2026 Valora B2B. All rights reserved. ⚜️ Gouvernement du Québec NEQ Compliance Assured.</p>
+        <p>© 2026 Valora B2B. {t.footer.rights} ⚜️ {t.footer.compliance}</p>
       </footer>
 
       {/* Onboarding Flow Modal */}

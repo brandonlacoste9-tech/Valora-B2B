@@ -19,6 +19,19 @@ export const translations = {
         matches: "Autonomous Matches Weekly",
         verified: "NEQ Verified Businesses",
         volume: "Procurement Volume",
+      },
+      widget: {
+        title: "Live AI Matchmaker",
+        portal: "Quebec Portal",
+        score: "Match Score",
+        now: "Just Now",
+        minsAgo: "mins ago",
+        rfp1: "RFP: Hydroelectric Parts Supply",
+        vendor1: "Matched Vendor: Quebec Métal Inc. (NEQ Verified)",
+        rfp2: "RFQ: IT Infrastructure Cloud Migration",
+        vendor2: "Matched Vendor: Technologies Alt-FR",
+        rfp3: "RFQ: Heavy Logistics Route Management",
+        vendor3: "Matched Vendor: Logistique Laurentides",
       }
     },
     features: {
@@ -46,14 +59,28 @@ export const translations = {
       buyerDesc: "Post RFPs, request bids, and discover local vendors.",
       vendor: "Enterprise Vendor",
       vendorDesc: "Browse procurement listings, match with RFPs, and bid.",
-      step2Title: "Quebec Business Info",
+      step2Title: "Enterprise Information",
+      roleLabel: "Role: ",
+      neqLabel: "NEQ (Quebec Enterprise Number)",
       neqPlaceholder: "10-digit NEQ (Numéro d'entreprise du Québec)",
       neqValid: "Valid NEQ! Enterprise verified.",
       neqInvalid: "NEQ must be a 10-digit number.",
       industry: "Industry / Sector",
       companyName: "Enterprise Name",
+      back: "Back",
       complete: "Complete Setup",
       success: "Profile successfully created! Welcome to Valora B2B.",
+      industries: {
+        manufacturing: "Manufacturing",
+        it: "Information Technology",
+        construction: "Construction",
+        logistics: "Logistics",
+        services: "Professional Services"
+      }
+    },
+    footer: {
+      rights: "All rights reserved.",
+      compliance: "Gouvernement du Québec NEQ Compliance Assured."
     }
   },
   fr: {
@@ -74,6 +101,19 @@ export const translations = {
         matches: "Jumelages autonomes / sem.",
         verified: "Entreprises vérifiées (NEQ)",
         volume: "Volume d'approvisionnement",
+      },
+      widget: {
+        title: "Matchmaker IA en direct",
+        portal: "Portail Québec",
+        score: "Score de correspondance",
+        now: "À l'instant",
+        minsAgo: "min. de cela",
+        rfp1: "Appel d'offres: Fourniture de pièces hydroélectriques",
+        vendor1: "Fournisseur jumelé: Québec Métal Inc. (Vérifié NEQ)",
+        rfp2: "DDO: Migration cloud d'infrastructure TI",
+        vendor2: "Fournisseur jumelé: Technologies Alt-FR",
+        rfp3: "DDO: Gestion des itinéraires logistiques lourds",
+        vendor3: "Fournisseur jumelé: Logistique Laurentides",
       }
     },
     features: {
@@ -102,13 +142,27 @@ export const translations = {
       vendor: "Fournisseur local",
       vendorDesc: "Parcourez les demandes et postulez aux appels d'offres.",
       step2Title: "Informations d'entreprise",
+      roleLabel: "Rôle : ",
+      neqLabel: "NEQ (Numéro d'entreprise du Québec)",
       neqPlaceholder: "NEQ à 10 chiffres (Numéro d'entreprise du Québec)",
       neqValid: "NEQ valide ! Entreprise authentifiée.",
       neqInvalid: "Le NEQ doit contenir 10 chiffres.",
       industry: "Secteur d'activité",
       companyName: "Nom de l'entreprise",
+      back: "Retour",
       complete: "Finaliser l'inscription",
       success: "Profil créé avec succès ! Bienvenue sur Valora B2B.",
+      industries: {
+        manufacturing: "Manufacturier",
+        it: "Technologies de l'information",
+        construction: "Construction",
+        logistics: "Logistique et Transport",
+        services: "Services professionnels"
+      }
+    },
+    footer: {
+      rights: "Tous droits réservés.",
+      compliance: "Conformité NEQ du Gouvernement du Québec assurée."
     }
   }
 };
