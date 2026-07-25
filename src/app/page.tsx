@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Locale, translations } from "@/lib/translations";
 import { OnboardingFlow } from "@/components/OnboardingFlow";
 
 export default function Home() {
   const [locale, setLocale] = useState<Locale>("fr");
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("valora_locale") as Locale;
+    if (saved === "en" || saved === "fr") {
+      setLocale(saved);
+    }
+  }, []);
+
+  const changeLocale = (newLocale: Locale) => {
+    setLocale(newLocale);
+    localStorage.setItem("valora_locale", newLocale);
+  };
 
   const t = translations[locale];
 
@@ -47,7 +59,7 @@ export default function Home() {
             <div className="flex rounded-full border border-zinc-800 p-1 bg-zinc-900/50">
               <button
                 type="button"
-                onClick={() => setLocale("en")}
+                onClick={() => changeLocale("en")}
                 className={`rounded-full px-2.5 py-1 text-xs font-semibold uppercase transition-all ${
                   locale === "en" ? "bg-zinc-800 text-emerald-400 shadow-sm" : "text-zinc-500 hover:text-zinc-300"
                 }`}
@@ -56,7 +68,7 @@ export default function Home() {
               </button>
               <button
                 type="button"
-                onClick={() => setLocale("fr")}
+                onClick={() => changeLocale("fr")}
                 className={`rounded-full px-2.5 py-1 text-xs font-semibold uppercase transition-all ${
                   locale === "fr" ? "bg-zinc-800 text-emerald-400 shadow-sm" : "text-zinc-500 hover:text-zinc-300"
                 }`}

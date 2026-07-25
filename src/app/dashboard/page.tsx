@@ -29,6 +29,11 @@ export default function DashboardPage() {
   const t = translations[locale];
 
   useEffect(() => {
+    const saved = localStorage.getItem("valora_locale") as Locale;
+    if (saved === "en" || saved === "fr") {
+      setLocale(saved);
+    }
+
     async function loadSession() {
       const { data: { user } } = await supabase.auth.getUser();
       setUser(user);
@@ -39,6 +44,11 @@ export default function DashboardPage() {
     }
     loadSession();
   }, []);
+
+  const changeLocale = (newLocale: Locale) => {
+    setLocale(newLocale);
+    localStorage.setItem("valora_locale", newLocale);
+  };
 
   const refreshDashboard = async (role: "buyer" | "vendor") => {
     const res = await getDashboardDataAction(role);
@@ -129,7 +139,7 @@ export default function DashboardPage() {
             {/* Language Selector */}
             <div className="flex rounded-full border border-zinc-800 p-1 bg-zinc-900/50">
               <button
-                onClick={() => setLocale("en")}
+                onClick={() => changeLocale("en")}
                 className={`rounded-full px-2.5 py-1 text-xs font-semibold uppercase ${
                   locale === "en" ? "bg-zinc-800 text-emerald-400" : "text-zinc-500"
                 }`}
@@ -137,7 +147,7 @@ export default function DashboardPage() {
                 EN
               </button>
               <button
-                onClick={() => setLocale("fr")}
+                onClick={() => changeLocale("fr")}
                 className={`rounded-full px-2.5 py-1 text-xs font-semibold uppercase ${
                   locale === "fr" ? "bg-zinc-800 text-emerald-400" : "text-zinc-500"
                 }`}
